@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 25% 97%;
+    --foreground: 20 20% 12%;
+
+    --card: 30 20% 99%;
+    --card-foreground: 20 20% 12%;
+
+    --popover: 30 20% 99%;
+    --popover-foreground: 20 20% 12%;
+
+    --primary: 15 80% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 60% 92%;
+    --secondary-foreground: 20 20% 12%;
+
+    --muted: 30 15% 93%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 140 35% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 15 80% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 20% 96%;
+    --sidebar-foreground: 20 20% 12%;
+    --sidebar-primary: 15 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 60% 92%;
+    --sidebar-accent-foreground: 20 20% 12%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 15 80% 50%;
+  }
+
+  .dark {
+    --background: 20 15% 8%;
+    --foreground: 30 15% 92%;
+
+    --card: 20 15% 11%;
+    --card-foreground: 30 15% 92%;
+
+    --popover: 20 15% 11%;
+    --popover-foreground: 30 15% 92%;
+
+    --primary: 15 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 15% 16%;
+    --secondary-foreground: 30 15% 92%;
+
+    --muted: 20 15% 16%;
+    --muted-foreground: 30 10% 55%;
+
+    --accent: 140 35% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 15% 18%;
+    --input: 20 15% 18%;
+    --ring: 15 80% 55%;
+
+    --sidebar-background: 20 15% 10%;
+    --sidebar-foreground: 30 15% 92%;
+    --sidebar-primary: 15 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 15% 16%;
+    --sidebar-accent-foreground: 30 15% 92%;
+    --sidebar-border: 20 15% 18%;
+    --sidebar-ring: 15 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Tiptap editor styles */
+.tiptap {
+  @apply min-h-[200px] p-4 outline-none;
+}
+.tiptap p {
+  @apply mb-2;
+}
+.tiptap ul, .tiptap ol {
+  @apply pl-6 mb-2;
+}
+.tiptap ul {
+  @apply list-disc;
+}
+.tiptap ol {
+  @apply list-decimal;
+}
+.tiptap a {
+  @apply text-primary underline;
+}
+.tiptap strong {
+  @apply font-bold;
+}
+.tiptap em {
+  @apply italic;
+}
+.tiptap h1 { @apply text-2xl font-bold mb-3; }
+.tiptap h2 { @apply text-xl font-bold mb-2; }
+.tiptap h3 { @apply text-lg font-bold mb-2; }
+
+/* Rich text display */
+.prose a { @apply text-primary underline; }
+.prose ul { @apply list-disc pl-6 mb-2; }
+.prose ol { @apply list-decimal pl-6 mb-2; }
+.prose strong { @apply font-bold; }
+.prose em { @apply italic; }
+.prose h1 { @apply text-2xl font-bold mb-3; }
+.prose h2 { @apply text-xl font-bold mb-2; }
+.prose h3 { @apply text-lg font-bold mb-2; }
+.prose p { @apply mb-2; }
