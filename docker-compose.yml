@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: recipe-share-hub-app
+    container_name: lovable_recipe_share_hub_app
     ports:
       - "127.0.0.1:5173:5173"
     env_file:
